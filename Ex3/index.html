@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <title>Ex3</title>
+</head>
+
+<body>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            height: auto;
+            background-color: rgb(82, 0, 0);
+            font-family: "Cinzel Decorative", serif;
+            font-weight: 900;
+            font-style: normal;
+            color: white;
+        }
+
+        .aparecer {
+            padding: 0 500px;
+        }
+
+    </style>
+    <h1>Contador até 100</h1>
+    <label for="num">Número:</label>
+    <input type="number" id="num" placeholder="Insira um número"><br>
+    <button onclick="conta()">Iniciar Contagem</button>
+        <p id="aparecer" class="aparecer"></p>
+
+    <script>
+        function conta() {
+            let num = parseInt(document.getElementById("num").value);
+            let output = '';
+            for (let i = num; i <= 100; i++) {
+                output += i + ' ';
+            }
+            document.getElementById("aparecer").textContent = output;
+        }
+    </script>
+    <div class="right">
+        <img src="../Ex3/ex3.png" alt="">
+    </div>
+</body>
+
+</html>

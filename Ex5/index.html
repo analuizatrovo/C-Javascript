@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <title>Ex5</title>
+</head>
+
+<body>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            height: auto;
+            background-color: rgb(82, 0, 0);
+            font-family: "Cinzel Decorative", serif;
+            font-weight: 900;
+            font-style: normal;
+            color: white;
+        }
+    </style>
+    <h1>Média de Horas Trabalhadas</h1>
+    <label for="h1">Informe as horas trabalhadas no primeiro dia:</label>
+    <input type="number" id="h1" placeholder="Insira as horas"><br>
+    <label for="h2">Informe as horas trabalhadas no segundo dia:</label>
+    <input type="number" id="h2" placeholder="Insira as horas"><br>
+    <label for="h3">Informe as horas trabalhadas no terceiro dia:</label>
+    <input type="number" id="h3" placeholder="Insira as horas"><br>
+    <label for="h4">Informe as horas trabalhadas no quarto dia:</label>
+    <input type="number" id="h4" placeholder="Insira as horas"><br>
+    <label for="h5">Informe as horas trabalhadas no quinto dia:</label>
+    <input type="number" id="h5" placeholder="Insira as horas"><br>
+    <button onclick="calcularMedia()">Calcular Média</button>
+    <p id="mostrar"></p>
+
+    <script>
+        function calcularMedia() {
+            const h1 = parseFloat(document.getElementById("h1").value);
+            const h2 = parseFloat(document.getElementById("h2").value);
+            const h3 = parseFloat(document.getElementById("h3").value);
+            const h4 = parseFloat(document.getElementById("h4").value);
+            const h5 = parseFloat(document.getElementById("h5").value);
+
+            const resp = (h1 + h2 + h3 + h4 + h5) / 5;
+
+            document.getElementById("mostrar").textContent = "A média de horas trabalhadas é de: " + resp.toFixed(1) + " horas por dia.";
+        }
+    </script>
+    <div class="right">
+        <img src="../Ex5/ex5.png" alt="">
+    </div>
+</body>
+
+</html>

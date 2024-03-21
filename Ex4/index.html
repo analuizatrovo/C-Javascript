@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <title>Ex4</title>
+</head>
+
+<body>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            height: auto;
+            background-color: rgb(82, 0, 0);
+            font-family: "Cinzel Decorative", serif;
+            font-weight: 900;
+            font-style: normal;
+            color: white;
+        }
+
+    </style>
+    <h1>Calculadora de Salário</h1>
+    <label for="sal">Salário:</label>
+    <input type="number" id="sal" placeholder="Insira o salário"><br>
+    <button onclick="calcula()">Calcular</button>
+    <p id="aparecer" class="aparecer"></p>
+
+    <script>
+        function calcula() {
+            let sal = parseFloat(document.getElementById("sal").value);
+            let resp1 = sal * 0.15;
+            resp1 = resp1 + sal;
+            let resp2 = resp1 * 0.08;
+            resp2 = resp1 - resp2;
+            
+            document.getElementById("aparecer").textContent = "O SALÁRIO INICIAL É: R$ " + sal.toFixed(2) + " .\nO SALÁRIO COM AUMENTO É: R$ " + resp1.toFixed(2) + " .\nE O SALÁRIO FINAL COM DESCONTO É: R$ " + resp2.toFixed(2) + " .\n";
+        }
+    </script>
+    <div class="right">
+        <img src="../Ex4/ex4.png" alt="">
+    </div>
+</body>
+
+</html>
